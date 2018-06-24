@@ -16,17 +16,16 @@ public class CyclicBarrierDemo2 {
 
 		barrierThreadHandler1.start();
 		barrierThreadHandler2.start();
-
+		
 		// Reusing the same barrier
-		/*
-		 * BarrierThreadHandler barrierThreadHandler3 = new
-		 * BarrierThreadHandler(barrier, 1000);
-		 * barrierThreadHandler3.setName("Dev Team 3"); BarrierThreadHandler
-		 * barrierThreadHandler4 = new BarrierThreadHandler(barrier, 3000);
-		 * barrierThreadHandler4.setName("Dev Team 4");
-		 * 
-		 * barrierThreadHandler3.start(); barrierThreadHandler4.start();
-		 */
+		 barrier.reset();
+		 BarrierThreadHandler barrierThreadHandler3 = new
+		 BarrierThreadHandler(barrier, 1000);
+		 barrierThreadHandler3.setName("Dev Team 3"); BarrierThreadHandler
+		 barrierThreadHandler4 = new BarrierThreadHandler(barrier, 3000);
+		 barrierThreadHandler4.setName("Dev Team 4");
+		 barrierThreadHandler3.start(); barrierThreadHandler4.start();
+		 
 	}
 }
 
